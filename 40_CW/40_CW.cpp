@@ -4,6 +4,7 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include "Dairy.h"
 using namespace std;
 
 
@@ -28,7 +29,8 @@ int main()
     }
     */
 
-    
+    Dairy Pavlo;
+    Pavlo.showAllEvents();
 
     return 0;
 }

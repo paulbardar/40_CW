@@ -55,6 +55,15 @@ void Dairy::showEventByDate(Date d) const&
 
 void Dairy::showEventByInfo(string info) const&
 {
+	for (auto item : Book) {
+		for (int i = 0; i < item.second.size(); i++) {
+			if (item.second[i] == info) {
+				cout << "Date of event: " << item.first << endl;
+				break;
+			}
+			
+		}
+	}
 }
 
 void Dairy::showAllEvents() const&

@@ -36,16 +36,21 @@ int main()
 
     cout << "===============================================" << endl;
 
+    /*
     Pavlo.delEvent(Date() + 1, 0);
     Pavlo.delEvent(Date() - 1, 0);
     Pavlo.delEvent(Date() + 2, 0);
 
     Pavlo.showAllEvents();
-
+    */
     cout << "===============================================" << endl;
 
     Pavlo.showEventByDate(Date() + 1);
     Pavlo.showEventByDate(Date());
+
+    cout << "===============================================" << endl;
+
+    Pavlo.showEventByInfo("C++");
   
 
     return 0;

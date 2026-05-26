@@ -17,6 +17,25 @@ void Dairy::addEvent(Date d, string info)
 
 void Dairy::delEvent(Date d, int n)
 {
+	//Book.erase(d); - delete all events by date
+	auto item = Book.find(d);
+	if (item == Book.end()) {
+		cout << "Not found Date" << endl;
+	}
+	else {
+		int size = Book[d].size();
+		if (n < 0 || n > size) {
+			cout << "Not found event" << endl;
+		}
+		else {
+			Book[d].erase(Book[d].begin() + n);
+			if (Book[d].size() == 0) {
+				Book.erase(d);
+			}
+			cout << "Event deleted" << endl;
+		}
+	}
+
 }
 
 void Dairy::showEventByDate(Date d) const&

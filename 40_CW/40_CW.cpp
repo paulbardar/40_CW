@@ -5,6 +5,7 @@
 #include <map>
 #include <string>
 #include "Dairy.h"
+#include "Forum.h"
 using namespace std;
 
 
@@ -29,6 +30,7 @@ int main()
     }
     */
 
+    /*
     Dairy Pavlo;
     Pavlo.addEvent(Date(2026, 8, 24), "Independent Day");
     Pavlo.addEvent(Date(), "Coffee break");
@@ -36,13 +38,13 @@ int main()
 
     cout << "===============================================" << endl;
 
-    /*
+    
     Pavlo.delEvent(Date() + 1, 0);
     Pavlo.delEvent(Date() - 1, 0);
     Pavlo.delEvent(Date() + 2, 0);
 
     Pavlo.showAllEvents();
-    */
+    
     cout << "===============================================" << endl;
 
     Pavlo.showEventByDate(Date() + 1);
@@ -51,7 +53,15 @@ int main()
     cout << "===============================================" << endl;
 
     Pavlo.showEventByInfo("C++");
-  
+    */
+    cout << "===============================================" << endl;
+
+    Forum ItStep;
+    ItStep.signUp("Diana", "55555");
+    ItStep.signUp("Daniil", "55555");
+
+    ItStep.showUsers();
+
 
     return 0;
 }

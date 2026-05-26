@@ -12,6 +12,7 @@ Dairy::Dairy()
 
 void Dairy::addEvent(Date d, string info)
 {
+	Book[d].push_back(info);
 }
 
 void Dairy::delEvent(Date d, int n)

@@ -30,7 +30,11 @@ int main()
     */
 
     Dairy Pavlo;
+    Pavlo.addEvent(Date(2026, 8, 24), "Independent Day");
+    Pavlo.addEvent(Date(), "Coffe break");
     Pavlo.showAllEvents();
+
+
 
     return 0;
 }

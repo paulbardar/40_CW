@@ -28,7 +28,7 @@ void Dairy::delEvent(Date d, int n)
 			cout << "Not found event" << endl;
 		}
 		else {
-			cout << "Event deleted" << Book[d][n] << " by " << d << endl;
+			cout << "Event deleted " << Book[d][n] << " by " << d << endl;
 			Book[d].erase(Book[d].begin() + n);
 			if (Book[d].size() == 0) {
 				Book.erase(d);
@@ -41,6 +41,16 @@ void Dairy::delEvent(Date d, int n)
 
 void Dairy::showEventByDate(Date d) const&
 {
+	auto item = Book.find(d);
+	if (item == Book.end()) {
+		cout << "Not found Date" << endl;
+	}
+	else {
+		cout << item->first << " " << endl;
+		for (auto event : item->second) {  // vector events
+			cout << "\t" << event << endl;
+		}
+	}
 }
 
 void Dairy::showEventByInfo(string info) const&

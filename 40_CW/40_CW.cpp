@@ -42,6 +42,11 @@ int main()
 
     Pavlo.showAllEvents();
 
+    cout << "===============================================" << endl;
+
+    Pavlo.showEventByDate(Date() + 1);
+    Pavlo.showEventByDate(Date());
+  
 
     return 0;
 }

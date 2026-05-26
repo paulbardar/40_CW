@@ -31,9 +31,16 @@ int main()
 
     Dairy Pavlo;
     Pavlo.addEvent(Date(2026, 8, 24), "Independent Day");
-    Pavlo.addEvent(Date(), "Coffe break");
+    Pavlo.addEvent(Date(), "Coffee break");
     Pavlo.showAllEvents();
 
+    cout << "===============================================" << endl;
+
+    Pavlo.delEvent(Date() + 1, 0);
+    Pavlo.delEvent(Date() - 1, 0);
+    Pavlo.delEvent(Date() + 2, 0);
+
+    Pavlo.showAllEvents();
 
 
     return 0;

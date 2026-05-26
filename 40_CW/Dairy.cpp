@@ -28,11 +28,12 @@ void Dairy::delEvent(Date d, int n)
 			cout << "Not found event" << endl;
 		}
 		else {
+			cout << "Event deleted" << Book[d][n] << " by " << d << endl;
 			Book[d].erase(Book[d].begin() + n);
 			if (Book[d].size() == 0) {
 				Book.erase(d);
 			}
-			cout << "Event deleted" << endl;
+			
 		}
 	}
 
